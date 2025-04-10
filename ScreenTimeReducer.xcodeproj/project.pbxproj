@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B62765BA2DA226C900A322A6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62765B92DA226C900A322A6 /* WidgetKit.framework */; };
+		B62765BC2DA226C900A322A6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62765BB2DA226C900A322A6 /* SwiftUI.framework */; };
+		B62765CB2DA226CB00A322A6 /* LifeProgressWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B62765B72DA226C900A322A6 /* LifeProgressWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B62765C92DA226CB00A322A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B62765502D9C2EAC00A322A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B62765B62DA226C900A322A6;
+			remoteInfo = LifeProgressWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B627658F2D9FBCE600A322A6 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62765D02DA226CB00A322A6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B62765CB2DA226CB00A322A6 /* LifeProgressWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B62765582D9C2EAC00A322A6 /* ScreenTimeReducer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenTimeReducer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62765B72DA226C900A322A6 /* LifeProgressWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LifeProgressWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62765B92DA226C900A322A6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B62765BB2DA226C900A322A6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B62765D52DA2811C00A322A6 /* LifeProgressWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifeProgressWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B62765CC2DA226CB00A322A6 /* Exceptions for "LifeProgressWidget" folder in "LifeProgressWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B62765B62DA226C900A322A6 /* LifeProgressWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B627655A2D9C2EAC00A322A6 /* ScreenTimeReducer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ScreenTimeReducer;
+			sourceTree = "<group>";
+		};
+		B62765BD2DA226C900A322A6 /* LifeProgressWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B62765CC2DA226CB00A322A6 /* Exceptions for "LifeProgressWidget" folder in "LifeProgressWidgetExtension" target */,
+			);
+			path = LifeProgressWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +88,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B62765B42DA226C900A322A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B62765BC2DA226C900A322A6 /* SwiftUI.framework in Frameworks */,
+				B62765BA2DA226C900A322A6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B627654F2D9C2EAC00A322A6 = {
 			isa = PBXGroup;
 			children = (
+				B62765D52DA2811C00A322A6 /* LifeProgressWidgetExtension.entitlements */,
 				B627655A2D9C2EAC00A322A6 /* ScreenTimeReducer */,
+				B62765BD2DA226C900A322A6 /* LifeProgressWidget */,
+				B62765B82DA226C900A322A6 /* Frameworks */,
 				B62765592D9C2EAC00A322A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				B62765582D9C2EAC00A322A6 /* ScreenTimeReducer.app */,
+				B62765B72DA226C900A322A6 /* LifeProgressWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B62765B82DA226C900A322A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B62765B92DA226C900A322A6 /* WidgetKit.framework */,
+				B62765BB2DA226C900A322A6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +139,13 @@
 				B62765542D9C2EAC00A322A6 /* Sources */,
 				B62765552D9C2EAC00A322A6 /* Frameworks */,
 				B62765562D9C2EAC00A322A6 /* Resources */,
+				B627658F2D9FBCE600A322A6 /* Embed ExtensionKit Extensions */,
+				B62765D02DA226CB00A322A6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B62765CA2DA226CB00A322A6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B627655A2D9C2EAC00A322A6 /* ScreenTimeReducer */,
@@ -69,6 +156,28 @@
 			productName = ScreenTimeReducer;
 			productReference = B62765582D9C2EAC00A322A6 /* ScreenTimeReducer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B62765B62DA226C900A322A6 /* LifeProgressWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B62765CD2DA226CB00A322A6 /* Build configuration list for PBXNativeTarget "LifeProgressWidgetExtension" */;
+			buildPhases = (
+				B62765B32DA226C900A322A6 /* Sources */,
+				B62765B42DA226C900A322A6 /* Frameworks */,
+				B62765B52DA226C900A322A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B62765BD2DA226C900A322A6 /* LifeProgressWidget */,
+			);
+			name = LifeProgressWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LifeProgressWidgetExtension;
+			productReference = B62765B72DA226C900A322A6 /* LifeProgressWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +190,9 @@
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					B62765572D9C2EAC00A322A6 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					B62765B62DA226C900A322A6 = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
@@ -100,12 +212,20 @@
 			projectRoot = "";
 			targets = (
 				B62765572D9C2EAC00A322A6 /* ScreenTimeReducer */,
+				B62765B62DA226C900A322A6 /* LifeProgressWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B62765562D9C2EAC00A322A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62765B52DA226C900A322A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +242,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B62765B32DA226C900A322A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B62765CA2DA226CB00A322A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B62765B62DA226C900A322A6 /* LifeProgressWidgetExtension */;
+			targetProxy = B62765C92DA226CB00A322A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B62765622D9C2EAD00A322A6 /* Debug */ = {
@@ -244,9 +379,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ScreenTimeReducer/ScreenTimeReducer.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = ScreenTimeReducer/ScreenTimeReducerDebug.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4A36B3BYQ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -266,12 +403,15 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = TanakaYuki.ScreenTimeReducer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = screentimereducer;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
@@ -284,6 +424,7 @@
 				CODE_SIGN_ENTITLEMENTS = ScreenTimeReducer/ScreenTimeReducer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4A36B3BYQ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -305,11 +446,73 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Release;
+		};
+		B62765CE2DA226CB00A322A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LifeProgressWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4A36B3BYQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifeProgressWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifeProgressWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TanakaYuki.ScreenTimeReducer.LifeProgressWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B62765CF2DA226CB00A322A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LifeProgressWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4A36B3BYQ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifeProgressWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifeProgressWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TanakaYuki.ScreenTimeReducer.LifeProgressWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -330,6 +533,15 @@
 			buildConfigurations = (
 				B62765652D9C2EAD00A322A6 /* Debug */,
 				B62765662D9C2EAD00A322A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B62765CD2DA226CB00A322A6 /* Build configuration list for PBXNativeTarget "LifeProgressWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B62765CE2DA226CB00A322A6 /* Debug */,
+				B62765CF2DA226CB00A322A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
